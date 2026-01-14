@@ -146,7 +146,8 @@
             transition: all 0.15s ease;
         }
 
-        .nav-link:hover {
+        .nav-link:hover,
+        .nav-link:active {
             background: linear-gradient(to bottom,
                 #e0e0e0 0%,
                 #d0d0d0 45%,
@@ -170,6 +171,20 @@
             border-left: 1px solid var(--french-blue-dark);
             border-right: 1px solid var(--french-blue-dark);
             text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
+        }
+
+        @media (hover: none) {
+            .nav-link:active:not(.active) {
+                background: linear-gradient(to bottom,
+                    #e0e0e0 0%,
+                    #d0d0d0 45%,
+                    #c8c8c8 50%,
+                    #d0d0d0 55%,
+                    #e0e0e0 100%
+                );
+                border-left: 1px solid #a0a0a0;
+                border-right: 1px solid #a0a0a0;
+            }
         }
 
         /* Hero section */
