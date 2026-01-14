@@ -545,11 +545,13 @@
         // Random quote selection
         const quotes = [
             "make it make sense",
-            "upside down and inside out",
+            "upside down & inside out",
             "no broke boys, no new friends",
-            "where do you want to go today",
+            "where do you want to go today?",
             "whatever.",
-            "feel good"
+            "feel good",
+            "we do what we must because we can",
+            "were it so easy"
         ];
         
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -573,11 +575,13 @@
 
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         
         if (savedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
             themeToggle.textContent = 'light';
+        } else {
+            themeToggle.textContent = 'dark';
         }
 
         themeToggle.addEventListener('click', () => {
