@@ -119,13 +119,16 @@
             border-bottom: 1px solid #b0b0b0;
             border-top: 1px solid #c0c0c0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            height: 36px;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
             padding: 0 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            height: 36px;
-            max-width: 900px;
-            margin: 0 auto;
+            height: 100%;
         }
 
         .nav-links {
@@ -489,11 +492,13 @@
     </header>
 
     <nav class="main-nav">
-        <div class="nav-links">
-            <a href="#about" class="nav-link active" data-section="about">about</a>
-            <a href="#thoughts" class="nav-link" data-section="thoughts">thoughts</a>
-            <a href="#projects" class="nav-link" data-section="projects">projects</a>
-            <a href="#contact" class="nav-link" data-section="contact">contact</a>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#about" class="nav-link active" data-section="about">about</a>
+                <a href="#thoughts" class="nav-link" data-section="thoughts">thoughts</a>
+                <a href="#projects" class="nav-link" data-section="projects">projects</a>
+                <a href="#contact" class="nav-link" data-section="contact">contact</a>
+            </div>
         </div>
     </nav>
 
