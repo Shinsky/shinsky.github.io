@@ -153,8 +153,8 @@
             transition: all 0.15s ease;
         }
 
-        .nav-link:hover,
-        .nav-link:active {
+        .nav-link:hover:not(.active),
+        .nav-link:active:not(.active) {
             background: linear-gradient(to bottom,
                 #e0e0e0 0%,
                 #d0d0d0 45%,
@@ -462,17 +462,17 @@
             border-top: 1px solid #444;
         }
 
-        [data-theme="dark"] .nav-link:hover,
-        [data-theme="dark"] .nav-link:active {
+        [data-theme="dark"] .nav-link:hover:not(.active),
+        [data-theme="dark"] .nav-link:active:not(.active) {
             background: linear-gradient(to bottom,
-                #333 0%,
-                #2a2a2a 45%,
-                #222 50%,
-                #2a2a2a 55%,
-                #333 100%
+                #4a4a4a 0%,
+                #404040 45%,
+                #383838 50%,
+                #404040 55%,
+                #4a4a4a 100%
             );
-            border-left: 1px solid #444;
-            border-right: 1px solid #444;
+            border-left: 1px solid #555;
+            border-right: 1px solid #555;
         }
 
         [data-theme="dark"] .content-box {
