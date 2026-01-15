@@ -623,7 +623,7 @@
 </head>
 <body>
     <header class="site-header">
-        <a href="#" class="logo">shinsky.space</a>
+        <a href="#home" class="logo" id="logo-link">shinsky.space</a>
         <p class="quote" id="random-quote"></p>
     </header>
 
@@ -632,13 +632,21 @@
             <div class="nav-links">
                 <a href="#thoughts" class="nav-link" data-section="thoughts">thoughts</a>
                 <a href="#projects" class="nav-link" data-section="projects">projects</a>
-                <a href="#about" class="nav-link active" data-section="about">about</a>
+                <a href="#about" class="nav-link" data-section="about">about</a>
             </div>
         </div>
     </nav>
 
     <div class="content-wrapper">
-        <section id="about" class="section active">
+        <section id="home" class="section active">
+            <div class="content-box">
+                <h2>welcome to shinsky.space</h2>
+                <p>This is my corner of the internet where I share thoughts, projects, and a bit about myself. It's not much, but it's honest work.</p>
+                <p style="margin-top: 15px;">Feel free to explore around using the navigation above, or just hang out here for a bit. No judgment either way.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section">
             <div class="content-box">
                 <div class="about-layout">
                     <div class="about-photo">
@@ -653,7 +661,7 @@
                                 <a href="https://bsky.app/profile/shinsky.bsky.social" class="social-button">BlueSky</a>
                                 <a href="https://instagram.com/lashinsky" class="social-button">Instagram</a>
                                 <a href="https://linkedin.com/in/andrewlashinsky" class="social-button">LinkedIn</a>
-                                <a href="mailto:andrew@lashinsky.co" class="social-button">Email</a>
+                                <a href="/cdn-cgi/l/email-protection#71101f15031406311d100219181f021a085f121e" class="social-button">Email</a>
                             </div>
                         </div>
                     </div>
@@ -723,7 +731,7 @@
         <p class="copyright">2026 ● andrew lashinsky <span class="separator">|</span> <button class="theme-toggle" id="theme-toggle">dark</button></p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Random quote selection
         const quotes = [
             "make it make sense",
@@ -755,6 +763,16 @@
             });
         });
 
+        // Logo click handler - goes to home and clears all nav active states
+        const logoLink = document.getElementById('logo-link');
+        logoLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            document.getElementById('home').classList.add('active');
+        });
+
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
         const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -781,3 +799,4 @@
     </script>
 </body>
 </html>
+            
