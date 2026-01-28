@@ -621,89 +621,26 @@
             border-color: #444;
         }
 
-        /* Splash page styles */
-        .splash-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 80px;
-        }
-
-        .splash-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        .enter-button {
-            position: relative;
-            z-index: 2;
-            font-family: 'Departure Mono', monospace;
-            font-size: 24px;
-            font-weight: normal;
-            letter-spacing: 2px;
-            padding: 20px 50px;
-            background: linear-gradient(to bottom,
-                var(--french-blue-light) 0%,
-                var(--french-blue) 45%,
-                var(--french-blue-dark) 50%,
-                var(--french-blue) 55%,
-                var(--french-blue-light) 100%
-            );
-            color: #ffffff;
-            text-decoration: none;
-            border: 2px solid var(--french-blue-dark);
-            border-radius: 8px;
-            box-shadow: 
-                0 4px 8px rgba(0,0,0,0.3),
-                inset 0 1px 0 rgba(255,255,255,0.3);
-            text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .enter-button:hover {
-            background: linear-gradient(to bottom,
-                var(--french-blue) 0%,
-                var(--french-blue-dark) 45%,
-                #003d7a 50%,
-                var(--french-blue-dark) 55%,
-                var(--french-blue) 100%
-            );
-            box-shadow: 
-                0 6px 12px rgba(0,0,0,0.4),
-                inset 0 1px 0 rgba(255,255,255,0.3);
-        }
-
-        .enter-button:active {
-            box-shadow: 
-                inset 0 2px 4px rgba(0,0,0,0.4),
-                0 1px 2px rgba(0,0,0,0.2);
-        }
-
+        /* Home page clickable image */
         #home.section {
             padding: 0;
         }
 
-        #home.section .content-wrapper {
-            padding: 0;
-            max-width: none;
+        .home-image-link {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
         }
 
-        @media (max-width: 700px) {
-            .splash-container {
-                justify-content: center;
-                padding-right: 0;
-            }
+        .home-image-link:hover {
+            opacity: 0.95;
+        }
+
+        .home-hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -725,17 +662,16 @@
 
     <div class="content-wrapper">
         <section id="home" class="section active">
-            <div class="splash-container">
-                <img src="home-hero.jpg" alt="Welcome" class="splash-image">
-                <a href="#thoughts" class="enter-button" data-section="thoughts">ENTER</a>
-            </div>
+            <a href="#thoughts" class="home-image-link" data-section="thoughts">
+                <img src="home-hero.jpg" alt="Enter" class="home-hero-image">
+            </a>
         </section>
 
         <section id="about" class="section">
             <div class="content-box">
                 <div class="about-layout">
                     <div class="about-photo">
-                        <img src="photo.jpg" alt="Andrew Lashinsky" id="profile-photo">
+                        <img src="bio-hero.jpg" alt="Andrew Lashinsky" id="profile-photo">
                     </div>
                     <div class="about-text">
                         <h2>hey, I'm andrew.</h2>
@@ -848,12 +784,12 @@
             });
         });
 
-        // ENTER button handler
-        const enterButton = document.querySelector('.enter-button');
-        if (enterButton) {
-            enterButton.addEventListener('click', (e) => {
+        // Home image click handler
+        const homeImageLink = document.querySelector('.home-image-link');
+        if (homeImageLink) {
+            homeImageLink.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetSection = enterButton.dataset.section;
+                const targetSection = homeImageLink.dataset.section;
 
                 navLinks.forEach(l => l.classList.remove('active'));
                 document.querySelector(`.nav-link[data-section="${targetSection}"]`).classList.add('active');
