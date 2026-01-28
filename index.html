@@ -626,6 +626,10 @@
             padding: 0;
         }
 
+        .main-nav.hidden {
+            display: none;
+        }
+
         .home-image-link {
             display: block;
             width: 100%;
@@ -775,6 +779,20 @@
 
         const navLinks = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('.section');
+        const mainNav = document.querySelector('.main-nav');
+
+        // Function to update nav visibility
+        function updateNavVisibility() {
+            const homeSection = document.getElementById('home');
+            if (homeSection.classList.contains('active')) {
+                mainNav.classList.add('hidden');
+            } else {
+                mainNav.classList.remove('hidden');
+            }
+        }
+
+        // Initial check
+        updateNavVisibility();
 
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -786,6 +804,8 @@
 
                 sections.forEach(s => s.classList.remove('active'));
                 document.getElementById(targetSection).classList.add('active');
+                
+                updateNavVisibility();
             });
         });
 
@@ -801,6 +821,8 @@
 
                 sections.forEach(s => s.classList.remove('active'));
                 document.getElementById(targetSection).classList.add('active');
+                
+                updateNavVisibility();
             });
         }
 
@@ -812,6 +834,8 @@
             navLinks.forEach(l => l.classList.remove('active'));
             sections.forEach(s => s.classList.remove('active'));
             document.getElementById('home').classList.add('active');
+            
+            updateNavVisibility();
         });
 
         // Dark mode toggle
