@@ -629,12 +629,17 @@ footer {
 .rss-link {
     font-family: 'Departure Mono', monospace;
     font-size: 11px;
+    background: none;
+    border: 1px solid var(--mid-gray);
     color: var(--mid-gray);
+    padding: 4px 10px;
+    border-radius: 4px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .rss-link:hover {
+    border-color: var(--french-blue);
     color: var(--french-blue);
 }
 
