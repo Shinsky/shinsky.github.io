@@ -14,8 +14,6 @@
     --french-blue: #3d7fc4;
     --french-blue-light: #6a9fd4;
     --french-blue-dark: #0055a4;
-    --bright-orange: #ff6900;
-    --orange-hover: #ff8533;
 }
 
 [data-theme="dark"] {
@@ -96,7 +94,7 @@ body {
 }
 
 .logo span {
-    color: var(--bright-orange);
+    color: var(--french-blue);
 }
 
 /* Main navigation - brushed metal style */
@@ -238,18 +236,18 @@ body {
     margin-top: 20px;
     padding: 8px 20px;
     background: linear-gradient(to bottom,
-        #ff8533 0%,
-        var(--bright-orange) 45%,
-        #e65f00 50%,
-        var(--bright-orange) 55%,
-        #ff8533 100%
+        var(--french-blue-light) 0%,
+        var(--french-blue) 45%,
+        var(--french-blue-dark) 50%,
+        var(--french-blue) 55%,
+        var(--french-blue-light) 100%
     );
     color: var(--white);
     text-decoration: none;
     font-family: 'Departure Mono', monospace;
     font-size: 11px;
     border-radius: 4px;
-    border: 1px solid #d65a00;
+    border: 1px solid var(--french-blue-dark);
     box-shadow:
         0 1px 3px rgba(0,0,0,0.2),
         inset 0 1px 0 rgba(255,255,255,0.3);
@@ -259,11 +257,11 @@ body {
 
 .cta-button:hover {
     background: linear-gradient(to bottom,
-        #ff9144 0%,
-        var(--orange-hover) 45%,
-        var(--bright-orange) 50%,
-        var(--orange-hover) 55%,
-        #ff9144 100%
+        var(--french-blue) 0%,
+        var(--french-blue-light) 45%,
+        var(--french-blue) 50%,
+        var(--french-blue-light) 55%,
+        var(--french-blue) 100%
     );
 }
 
@@ -326,7 +324,7 @@ footer {
     content: '►';
     position: absolute;
     left: 0;
-    color: var(--bright-orange);
+    color: var(--french-blue);
     font-size: 8px;
     top: 11px;
 }
@@ -390,14 +388,14 @@ footer {
     border-radius: 4px !important;
     text-decoration: none !important;
     transition: all 0.2s ease;
-    border: 1px solid var(--bright-orange) !important;
-    background-color: var(--bright-orange) !important;
+    border: 1px solid var(--french-blue) !important;
+    background-color: var(--french-blue) !important;
     color: #ffffff !important;
 }
 
 .social-button:hover {
-    background-color: var(--orange-hover) !important;
-    border-color: var(--orange-hover) !important;
+    background-color: var(--french-blue-light) !important;
+    border-color: var(--french-blue-light) !important;
 }
 
 /* Carrying section */
@@ -591,7 +589,7 @@ footer {
 }
 
 .back-to-archive:hover {
-    color: var(--bright-orange);
+    color: var(--french-blue);
 }
 
 .post-hero {
@@ -645,9 +643,9 @@ footer {
     font-family: 'Departure Mono', monospace;
     font-size: 10px;
     padding: 3px 10px;
-    border: 1px solid var(--bright-orange);
+    border: 1px solid var(--french-blue);
     border-radius: 3px;
-    color: var(--bright-orange);
+    color: var(--french-blue);
     text-decoration: none;
     margin-right: 5px;
     margin-top: 2px;
@@ -655,7 +653,7 @@ footer {
 }
 
 .tag:hover {
-    background: var(--bright-orange);
+    background: var(--french-blue);
     color: #ffffff;
 }
 
