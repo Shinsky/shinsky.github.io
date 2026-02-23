@@ -1,8 +1,9 @@
 {{ define "main" }}
+{{ $page := . }}
 <div class="content-box">
     <a href="/thoughts/" class="back-to-archive">← all thoughts</a>
     {{ with .Params.hero }}
-    {{ $hero := $.Resources.GetMatch . }}
+    {{ $hero := $page.Resources.GetMatch . }}
     {{ with $hero }}
     <img src="{{ .RelPermalink }}" alt="" class="post-hero">
     {{ end }}
