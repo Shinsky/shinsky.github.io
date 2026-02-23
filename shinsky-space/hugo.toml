@@ -1,0 +1,14 @@
+baseURL = 'https://shinsky.space/'
+languageCode = 'en-us'
+title = 'shinsky.space'
+
+[pagination]
+  pagerSize = 50
+
+[params]
+  description = "andrew lashinsky's corner of the internet"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
