@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
-type: "article"
+style: "article"
 excerpt: ""
 draft: true
 ---

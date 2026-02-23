@@ -49,7 +49,7 @@
             }
         });
 
-        // Random quote
+        // Random quote (persists for the session)
         const quotes = [
             "make it make sense",
             "upside down & inside out",
@@ -62,7 +62,12 @@
         ];
         const quoteEl = document.getElementById('random-quote');
         if (quoteEl) {
-            quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+            let sessionQuote = sessionStorage.getItem('siteQuote');
+            if (!sessionQuote) {
+                sessionQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                sessionStorage.setItem('siteQuote', sessionQuote);
+            }
+            quoteEl.textContent = sessionQuote;
         }
     </script>
 </body>

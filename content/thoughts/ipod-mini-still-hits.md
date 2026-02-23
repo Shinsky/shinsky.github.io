@@ -1,7 +1,7 @@
 ---
 title: "The iPod mini still hits"
 date: 2026-02-22
-type: "note"
+style: "note"
 excerpt: "Threw my iPod mini in my pocket this morning instead of reaching for my phone. Sometimes you just want music."
 ---
 

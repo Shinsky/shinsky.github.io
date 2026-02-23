@@ -1,7 +1,7 @@
 ---
 title: "Hello, world"
 date: 2026-02-23
-type: "article"
+style: "article"
 excerpt: "Welcome to the thoughts section. This is where I'll be writing about tech, nostalgia, and whatever else is on my mind."
 ---
 
