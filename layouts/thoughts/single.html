@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="content-box">
+    <a href="/thoughts/" class="back-to-archive">← all thoughts</a>
+    {{ with .Params.hero }}
+    {{ $hero := $.Resources.GetMatch . }}
+    {{ with $hero }}
+    <img src="{{ .RelPermalink }}" alt="" class="post-hero">
+    {{ end }}
+    {{ end }}
+    <div class="post-header{{ if eq (.Params.style | default "article") "note" }} post-note{{ end }}">
+        <div class="post-date">{{ .Date.Format "jan 2, 2006" }}</div>
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with .Params.tags }}
+        <div class="post-tags">
+            {{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="post-body">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}
