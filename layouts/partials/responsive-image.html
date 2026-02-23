@@ -4,7 +4,7 @@
 
 {{- $type := $img.MediaType.SubType -}}
 
-{{- if eq $type "svg+xml" -}}
+{{- if eq $type "svg" -}}
 {{/* SVGs can't be processed - pass through as-is */}}
 <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}">
 
