@@ -8,7 +8,7 @@
             {{ with .Params.hero }}
             {{ $hero := $page.Resources.GetMatch . }}
             {{ with $hero }}
-            <img src="{{ .RelPermalink }}" alt="" class="post-list-hero">
+            {{ partial "responsive-image.html" (dict "img" . "class" "post-list-hero") }}
             {{ end }}
             {{ end }}
             <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>

@@ -8,7 +8,7 @@ excerpt: ""
 draft: true
 ---
 
-<!-- This post uses a page bundle. To add a hero image:
-     1. Place your image in this folder (e.g. hero.jpg)
+<!-- Page bundle post. To add a hero image:
+     1. Drop your image in this folder (e.g. hero.jpg)
      2. Set hero: "hero.jpg" above
--->
+     Hugo will auto-resize and convert to WebP at build time. -->

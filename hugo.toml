@@ -12,3 +12,10 @@ title = 'shinsky.space'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[imaging]
+  quality = 80
+  hint = "photo"
+  [imaging.exif]
+    disableDate = true
+    disableLatLong = true

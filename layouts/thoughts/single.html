@@ -5,7 +5,7 @@
     {{ with .Params.hero }}
     {{ $hero := $page.Resources.GetMatch . }}
     {{ with $hero }}
-    <img src="{{ .RelPermalink }}" alt="" class="post-hero">
+    {{ partial "responsive-image.html" (dict "img" . "class" "post-hero") }}
     {{ end }}
     {{ end }}
     <div class="post-header{{ if eq (.Params.style | default "article") "note" }} post-note{{ end }}">
