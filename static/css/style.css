@@ -626,6 +626,18 @@ footer {
     color: var(--french-blue);
 }
 
+.rss-link {
+    font-family: 'Departure Mono', monospace;
+    font-size: 11px;
+    color: var(--mid-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rss-link:hover {
+    color: var(--french-blue);
+}
+
 [data-theme="dark"] .main-nav {
     background: linear-gradient(to bottom,
         #3a3a3a 0%,
