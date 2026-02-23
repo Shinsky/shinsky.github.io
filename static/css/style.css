@@ -284,11 +284,20 @@ footer {
     font-family: 'Departure Mono', monospace;
     color: var(--french-blue);
     font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-.separator {
-    margin: 0 8px;
+.copyright-pill {
+    font-family: 'Departure Mono', monospace;
+    font-size: 11px;
+    background: none;
+    border: 1px solid var(--mid-gray);
     color: var(--mid-gray);
+    padding: 4px 10px;
+    border-radius: 4px;
 }
 
 /* Orange bullet points */
