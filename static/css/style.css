@@ -295,6 +295,7 @@ footer {
 }
 
 .copyright-pill {
+    display: inline-block;
     font-family: 'Departure Mono', monospace;
     font-size: 11px;
     background: none;
@@ -302,6 +303,7 @@ footer {
     color: var(--mid-gray);
     padding: 4px 10px;
     border-radius: 4px;
+    vertical-align: middle;
 }
 
 /* Orange bullet points */
