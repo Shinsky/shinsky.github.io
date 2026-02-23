@@ -282,12 +282,16 @@ footer {
 
 .copyright {
     font-family: 'Departure Mono', monospace;
-    color: var(--french-blue);
     font-size: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.separator {
+    color: var(--mid-gray);
+    font-size: 11px;
 }
 
 .copyright-pill {
