@@ -1,7 +1,7 @@
 ---
 title: Hello, world (note)
 slug: hello-world-note
-date: 2026-02-24
+date: 2026-02-23
 style: note
 hero: hero.svg
 tags:
@@ -10,5 +10,5 @@ tags:
 excerpt: this is a test post of the ”note” style
 draft: false
 ---
-this is a test post of the ”note” style
-`theverge.com`
+this is a test post of the ”note” style.
+https://theverge.com

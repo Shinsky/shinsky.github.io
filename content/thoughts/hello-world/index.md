@@ -1,6 +1,6 @@
 ---
 title: Hello, world
-date: 2026-02-23
+date: 2026-02-22
 style: article
 hero: hero.svg
 tags:
