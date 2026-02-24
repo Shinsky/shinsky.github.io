@@ -1,10 +1,11 @@
 ---
-title: "Hello, world"
+title: Hello, world
 date: 2026-02-23
-style: "article"
-hero: "hero.svg"
-tags: ["meta"]
-excerpt: "Welcome to the thoughts section. This is where I'll be writing about tech, nostalgia, and whatever else is on my mind."
+style: article
+hero: hero.svg
+tags:
+  - meta
+excerpt: Welcome to the thoughts section. This is where I'll be writing about tech, nostalgia, and whatever else is on my mind.
 draft: true
 ---
 
