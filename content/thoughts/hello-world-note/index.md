@@ -11,3 +11,4 @@ excerpt: this is a test post of the ”note” style
 draft: false
 ---
 this is a test post of the ”note” style
+`theverge.com`
