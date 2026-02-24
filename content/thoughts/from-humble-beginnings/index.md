@@ -9,10 +9,10 @@ tags:
 excerpt: I've never been a big fan of writing... despite that being most of my day to day at work.
 draft: false
 ---
-I've never been a big fan of writing... despite that being most of my day to day at work. But I've been yearning for a place to put thoughts, catalogue my interests, and share a bit about myself. 
+I've never been a big fan of writing... despite the fact that’s most of what I do day to day at work. But I've been yearning for a place to put my thoughts, catalogue interests, and share a bit about myself. 
 
 *This is that place.*
 
-Nostalgia is a big part of this. Thinking back to an era where people had websites and blogs. I'm not trying to say that was a better time, that this is a worse time (it might be), only that I just want to experience that again.
+Nostalgia is definitely a big part of this. Think back to the era when people had websites and personal blogs. I'm not saying that was a better time, or this is a worse time (it might be) — only that I just want to experience it all again.
 
 So here we go!
