@@ -7,6 +7,6 @@ tags:
   - meta
   - nopub
 excerpt: this is a test post of the ”article” style
-draft: false
+draft: true
 ---
 this is a test post of the ”article” style

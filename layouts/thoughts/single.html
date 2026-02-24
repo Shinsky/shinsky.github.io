@@ -4,16 +4,14 @@
 {{/* NOTE: compact single page */}}
 <div class="content-box note-single">
     <a href="/thoughts/" class="back-to-archive">← all thoughts</a>
-    <div class="note-meta">
-        <span class="post-date">{{ .Date.Format "jan 2, 2006" }}</span>
-        {{ with .Params.tags }}
-        <span class="note-tags">{{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}</span>
-        {{ end }}
-    </div>
+    <div class="post-date">{{ .Date.Format "jan 2, 2006" }}</div>
     <h1 class="post-title">{{ .Title }}</h1>
     <div class="note-body">
         {{ .Content }}
     </div>
+    {{ with .Params.tags }}
+    <div class="note-tags">{{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}</div>
+    {{ end }}
 </div>
 {{ else }}
 {{/* ARTICLE: full layout */}}
@@ -28,15 +26,15 @@
     <div class="post-header">
         <div class="post-date">{{ .Date.Format "jan 2, 2006" }}</div>
         <h1 class="post-title">{{ .Title }}</h1>
-        {{ with .Params.tags }}
-        <div class="post-tags">
-            {{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
-        </div>
-        {{ end }}
     </div>
     <div class="post-body">
         {{ .Content }}
     </div>
+    {{ with .Params.tags }}
+    <div class="post-tags">
+        {{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
+    </div>
+    {{ end }}
 </div>
 {{ end }}
 {{ end }}

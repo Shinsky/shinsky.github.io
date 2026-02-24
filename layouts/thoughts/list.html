@@ -6,14 +6,12 @@
         {{ if eq (.Params.style | default "article") "note" }}
         {{/* NOTE: compact inline entry */}}
         <div class="note-item">
-            <div class="note-meta">
-                <span class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</span>
-                {{ with .Params.tags }}
-                <span class="note-tags">{{ range . }}<span class="tag-inline">{{ . }}</span>{{ end }}</span>
-                {{ end }}
-            </div>
+            <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
             <div class="post-list-title">{{ .Title }}</div>
             <div class="note-body">{{ .Content }}</div>
+            {{ with .Params.tags }}
+            <div class="note-tags">{{ range . }}<span class="tag-inline">{{ . }}</span>{{ end }}</div>
+            {{ end }}
             <a href="{{ .Permalink }}" class="note-permalink">permalink ↗</a>
         </div>
         {{ else }}
@@ -27,13 +25,13 @@
             {{ end }}
             <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
             <div class="post-list-title">{{ .Title }}</div>
+            {{ with .Params.excerpt }}
+            <div class="post-list-excerpt">{{ . }}</div>
+            {{ end }}
             {{ with .Params.tags }}
             <div class="post-list-tags">
                 {{ range . }}<span class="tag-inline">{{ . }}</span>{{ end }}
             </div>
-            {{ end }}
-            {{ with .Params.excerpt }}
-            <div class="post-list-excerpt">{{ . }}</div>
             {{ end }}
         </a>
         {{ end }}

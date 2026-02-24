@@ -3,12 +3,12 @@ title: Hello, world (note)
 slug: hello-world-note
 date: 2026-02-23
 style: note
-hero: hero.svg
+hero:
 tags:
   - tech
   - nopub
 excerpt: this is a test post of the ”note” style
-draft: false
+draft: true
 ---
 this is a test post of the ”note” style.
 https://theverge.com
