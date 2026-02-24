@@ -292,16 +292,36 @@ footer {
     font-size: 11px;
 }
 
-.copyright-pill {
-    display: inline-block;
+/* Shared footer button base */
+.footer-btn {
     font-family: 'Departure Mono', monospace;
     font-size: 11px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0 10px;
     background: none;
     border: 1px solid var(--mid-gray);
     color: var(--mid-gray);
-    padding: 4px 10px;
     border-radius: 4px;
+    box-sizing: border-box;
     vertical-align: middle;
+    text-decoration: none;
+    cursor: default;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.footer-btn.clickable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.footer-btn.clickable:hover {
+    border-color: var(--french-blue);
+    color: var(--french-blue);
 }
 
 /* Orange bullet points */
@@ -714,45 +734,6 @@ footer {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px;
-}
-
-/* Dark mode toggle */
-.theme-toggle {
-    font-family: 'Departure Mono', monospace;
-    font-size: 11px;
-    background: none;
-    border: 1px solid var(--mid-gray);
-    color: var(--mid-gray);
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    vertical-align: middle;
-}
-
-.theme-toggle:hover {
-    border-color: var(--french-blue);
-    color: var(--french-blue);
-}
-
-.rss-link {
-    font-family: 'Departure Mono', monospace;
-    font-size: 11px;
-    display: inline-block;
-    background: none;
-    border: 1px solid var(--mid-gray);
-    color: var(--mid-gray);
-    padding: 4px 10px;
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    vertical-align: middle;
-}
-
-.rss-link:hover {
-    border-color: var(--french-blue);
-    color: var(--french-blue);
 }
 
 [data-theme="dark"] .main-nav {
