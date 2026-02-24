@@ -12,6 +12,7 @@
                 <span class="note-tags">{{ range . }}<span class="tag-inline">{{ . }}</span>{{ end }}</span>
                 {{ end }}
             </div>
+            <div class="post-list-title">{{ .Title }}</div>
             <div class="note-body">{{ .Content }}</div>
             <a href="{{ .Permalink }}" class="note-permalink">permalink ↗</a>
         </div>

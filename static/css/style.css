@@ -700,6 +700,14 @@ footer {
     gap: 4px;
 }
 
+.note-item .post-list-title {
+    margin-bottom: 8px;
+}
+
+.note-single .post-title {
+    margin-bottom: 15px;
+}
+
 .note-body {
     font-size: 13px;
     line-height: 1.7;
