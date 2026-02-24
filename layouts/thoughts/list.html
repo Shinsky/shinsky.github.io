@@ -3,7 +3,21 @@
     <div id="post-list">
         {{ range .Pages.ByDate.Reverse }}
         {{ $page := . }}
-        <a href="{{ .Permalink }}" class="post-list-item{{ if eq (.Params.style | default "article") "note" }} post-type-note{{ end }}">
+        {{ if eq (.Params.style | default "article") "note" }}
+        {{/* NOTE: compact inline entry */}}
+        <div class="note-item">
+            <div class="note-meta">
+                <span class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</span>
+                {{ with .Params.tags }}
+                <span class="note-tags">{{ range . }}<span class="tag-inline">{{ . }}</span>{{ end }}</span>
+                {{ end }}
+            </div>
+            <div class="note-body">{{ .Content }}</div>
+            <a href="{{ .Permalink }}" class="note-permalink">permalink ↗</a>
+        </div>
+        {{ else }}
+        {{/* ARTICLE: full card with hero + excerpt */}}
+        <a href="{{ .Permalink }}" class="post-list-item">
             {{ with .Params.hero }}
             {{ $hero := $page.Resources.GetMatch . }}
             {{ with $hero }}
@@ -21,6 +35,7 @@
             <div class="post-list-excerpt">{{ . }}</div>
             {{ end }}
         </a>
+        {{ end }}
         {{ end }}
     </div>
 </div>

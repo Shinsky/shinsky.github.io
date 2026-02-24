@@ -1,5 +1,21 @@
 {{ define "main" }}
 {{ $page := . }}
+{{ if eq (.Params.style | default "article") "note" }}
+{{/* NOTE: compact single page */}}
+<div class="content-box note-single">
+    <a href="/thoughts/" class="back-to-archive">← all thoughts</a>
+    <div class="note-meta">
+        <span class="post-date">{{ .Date.Format "jan 2, 2006" }}</span>
+        {{ with .Params.tags }}
+        <span class="note-tags">{{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}</span>
+        {{ end }}
+    </div>
+    <div class="note-body">
+        {{ .Content }}
+    </div>
+</div>
+{{ else }}
+{{/* ARTICLE: full layout */}}
 <div class="content-box">
     <a href="/thoughts/" class="back-to-archive">← all thoughts</a>
     {{ with .Params.hero }}
@@ -8,7 +24,7 @@
     {{ partial "responsive-image.html" (dict "img" . "class" "post-hero") }}
     {{ end }}
     {{ end }}
-    <div class="post-header{{ if eq (.Params.style | default "article") "note" }} post-note{{ end }}">
+    <div class="post-header">
         <div class="post-date">{{ .Date.Format "jan 2, 2006" }}</div>
         <h1 class="post-title">{{ .Title }}</h1>
         {{ with .Params.tags }}
@@ -21,4 +37,5 @@
         {{ .Content }}
     </div>
 </div>
+{{ end }}
 {{ end }}

@@ -620,11 +620,6 @@ footer {
     line-height: 1.5;
 }
 
-.post-type-note .post-list-title {
-    font-size: 13px;
-    font-weight: 400;
-}
-
 /* Individual post view */
 .back-to-archive {
     display: inline-block;
@@ -681,8 +676,80 @@ footer {
 }
 
 /* Note-style posts */
-.post-note .post-title {
-    font-size: 16px;
+.note-item {
+    padding: 18px 0 18px 16px;
+    border-bottom: 1px solid var(--light-gray);
+    border-left: 3px solid var(--french-blue);
+    margin-left: 0;
+}
+
+.note-item:last-child {
+    border-bottom: none;
+}
+
+.note-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.note-tags {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.note-body {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--dark-gray);
+}
+
+.note-body p {
+    margin-bottom: 10px;
+}
+
+.note-body p:last-child {
+    margin-bottom: 0;
+}
+
+.note-body a {
+    color: var(--french-blue);
+    text-decoration: underline;
+}
+
+.note-body a:hover {
+    color: var(--french-blue-light);
+}
+
+.note-permalink {
+    display: inline-block;
+    font-family: 'Departure Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-gray);
+    text-decoration: none;
+    margin-top: 8px;
+    transition: color 0.15s ease;
+}
+
+.note-permalink:hover {
+    color: var(--french-blue);
+}
+
+/* Note single page */
+.note-single {
+    border-left: 3px solid var(--french-blue);
+}
+
+.note-single .note-meta {
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.note-single .note-body {
+    line-height: 1.8;
 }
 
 /* Tags */
