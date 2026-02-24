@@ -2,29 +2,37 @@
 {{- $class := .class | default "post-hero" -}}
 {{- $alt := .alt | default "" -}}
 
-{{- $type := $img.MediaType.SubType -}}
-
-{{- if eq $type "svg" -}}
+{{- if eq $img.MediaType.SubType "svg" -}}
 {{/* SVGs can't be processed - pass through as-is */}}
 <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}">
 
 {{- else -}}
 {{/* Raster images: resize + convert to WebP with srcset */}}
-{{- $tiny := $img.Resize "400x webp q80" -}}
-{{- $small := $img.Resize "600x webp q80" -}}
-{{- $medium := $img.Resize "800x webp q80" -}}
-{{- $large := $img.Resize "1200x webp q80" -}}
+{{- $origWidth := $img.Width -}}
+{{- $sizes := slice 400 600 800 1200 -}}
+{{- $webpSrcset := slice -}}
 
-{{/* Also generate a fallback JPEG for the src attribute */}}
-{{- $fallback := $img.Resize "800x q85" -}}
+{{- range $sizes -}}
+  {{- if le . $origWidth -}}
+    {{- $resized := $img.Resize (printf "%dx webp q80" .) -}}
+    {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* If image is smaller than 400px, just use original as WebP */}}
+{{- if eq (len $webpSrcset) 0 -}}
+  {{- $resized := $img.Resize (printf "%dx webp q80" $origWidth) -}}
+  {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $resized.RelPermalink $origWidth) -}}
+{{- end -}}
+
+{{/* Fallback JPEG at 800px or original width, whichever is smaller */}}
+{{- $fallbackWidth := (cond (le $origWidth 800) $origWidth 800) -}}
+{{- $fallback := $img.Resize (printf "%dx jpg q85" $fallbackWidth) -}}
 
 <picture>
     <source
         type="image/webp"
-        srcset="{{ $tiny.RelPermalink }} 400w,
-                {{ $small.RelPermalink }} 600w,
-                {{ $medium.RelPermalink }} 800w,
-                {{ $large.RelPermalink }} 1200w"
+        srcset="{{ delimit $webpSrcset ", " }}"
         sizes="(max-width: 700px) 100vw, 860px">
     <img
         src="{{ $fallback.RelPermalink }}"
