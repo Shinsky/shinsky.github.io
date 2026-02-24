@@ -461,16 +461,16 @@ footer {
     overflow: hidden;
 }
 
-.home-hero-container::after {
-    content: '';
+.home-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--french-blue);
+    right: 0;
+    bottom: 0;
+    background: #3d7fc4;
     mix-blend-mode: color;
     pointer-events: none;
+    z-index: 0;
 }
 
 .home-hero-image {
