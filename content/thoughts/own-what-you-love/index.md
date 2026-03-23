@@ -10,6 +10,7 @@ tags:
   - apple
   - tiny-computers
   - tech-future
+  - rip-mix-burn
 excerpt: I have always been fascinated with the idea of my entire "digital life" being accessible in one place.
 draft: false
 hero_caption: "Photo: Apple"
