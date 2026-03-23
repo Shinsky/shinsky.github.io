@@ -18,9 +18,8 @@ I have always been fascinated with the idea of my entire "digital life" being ac
 
 Young Andrew would probably love what's become of technology, where the cloud makes it possible for a phone to be your entire digital existence. But it's not the same.
 
+![Steam Deck](steam%20deck%202026.jpeg "right")
 The recent crop of portable gaming devices -- the Steam Decks and AYN Thors of the world -- have made me realize that having everything with you means nothing if you don't actually HAVE copies of the things you care about. The Steam Deck excels at playing games. But if Valve takes away your library of DRM-laden games, you're back to square one. So the lesson is: don't give Valve, Apple, Microsoft, or the other big-bads the chance to take away the things you love.
-
-![](steam%20deck%202026.jpeg)
 
 It's a realization (one I'm far from the first to make) that has reignited my desire to save and catalog my digital life. Export and archive photos from the cloud; buy and save my games so they can be played on any device; and of course, rip my music, movies, and TV shows.
 

@@ -694,16 +694,44 @@ footer {
     border-radius: 4px;
     border: 1px solid var(--light-gray);
     display: block;
+}
+
+.post-body-img {
     margin: 20px 0;
+}
+
+.post-body-img.img-left {
+    float: left;
+    margin: 4px 20px 10px 0;
+    max-width: 45%;
+}
+
+.post-body-img.img-right {
+    float: right;
+    margin: 4px 0 10px 20px;
+    max-width: 45%;
+}
+
+.post-body-img.img-left img,
+.post-body-img.img-right img,
+.post-body-img.img-left picture img,
+.post-body-img.img-right picture img {
+    width: 100%;
 }
 
 .post-body picture {
     display: block;
-    margin: 20px 0;
 }
 
 .post-body picture img {
     margin: 0;
+}
+
+/* Clear floats after post body */
+.post-body::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 /* Note-style posts */
@@ -1025,5 +1053,12 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .post-body-img.img-left,
+    .post-body-img.img-right {
+        float: none;
+        max-width: 100%;
+        margin: 20px 0;
     }
 }
