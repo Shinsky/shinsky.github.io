@@ -23,7 +23,6 @@
             {{ partial "responsive-image.html" (dict "img" . "class" "post-list-hero") }}
             {{ end }}
             {{ end }}
-            {{ with .Params.hero_caption }}<div class="hero-caption">{{ . }}</div>{{ end }}
             <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
             <div class="post-list-title">{{ .Title }}</div>
             {{ with .Params.excerpt }}

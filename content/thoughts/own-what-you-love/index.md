@@ -8,16 +8,11 @@ tags:
   - tech
   - digital-hub
   - apple
-  - playstation
-  - psp
-  - ipod
-  - macbook
-  - powerbook
   - tiny-computers
   - tech-future
 excerpt: I have always been fascinated with the idea of my entire "digital life" being accessible in one place.
 draft: false
-hero_caption: Apple
+hero_caption: "Photo: Apple"
 ---
 I have always been fascinated with the idea of my entire "digital life" being accessible in one place. It started when I first logged onto my parents’ Windows 98 PC in the den... and by the time I was a teen, I dreamed that place would be a tiny computer I could take with me anywhere. Maybe a MacBook, or an iPod or PSP with all the games, music, movies, shows, and podcasts I love. It's Apple's "Digital Hub" strategy brought to life.
 
