@@ -980,18 +980,25 @@ footer {
     border-bottom: 1px solid var(--light-gray);
 }
 
+.related-list {
+    display: flex;
+    flex-direction: column;
+}
+
 .related-item {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--light-gray);
     text-decoration: none;
     transition: color 0.15s ease;
+    gap: 20px;
 }
 
 .related-item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .related-title {
@@ -1008,7 +1015,7 @@ footer {
     font-size: 11px;
     color: var(--mid-gray);
     flex-shrink: 0;
-    margin-left: 15px;
+    white-space: nowrap;
 }
 
 /* No-thumbnail card placeholder */

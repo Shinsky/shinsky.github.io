@@ -8,7 +8,6 @@ hero: shinskys space on imac.jpeg
 hero_caption: "Photo: Andrew Lashinsky"
 related_tags:
   - meta
-  - tech
 draft: false
 ---
 This is the site you're looking at right now. A personal website built from scratch with Hugo, featuring a brushed metal aesthetic inspired by early 2000s Apple and Sony design.
