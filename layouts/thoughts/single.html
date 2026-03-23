@@ -20,7 +20,10 @@
     {{ with .Params.hero }}
     {{ $hero := $page.Resources.GetMatch . }}
     {{ with $hero }}
+    <figure class="hero-figure">
     {{ partial "responsive-image.html" (dict "img" . "class" "post-hero") }}
+    {{ with $page.Params.hero_caption }}<figcaption class="hero-caption">{{ . }}</figcaption>{{ end }}
+    </figure>
     {{ end }}
     {{ end }}
     <div class="post-header">

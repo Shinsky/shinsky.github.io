@@ -639,8 +639,20 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     border: 1px solid var(--light-gray);
+}
+
+.hero-figure {
+    margin: 0 0 20px 0;
+}
+
+.hero-caption {
+    font-family: 'Departure Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-gray);
+    margin-top: 6px;
+    line-height: 1.4;
 }
 
 .post-header {
