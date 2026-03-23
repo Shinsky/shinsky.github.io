@@ -40,12 +40,9 @@
     <h2>related thoughts</h2>
     <div id="post-list">
         {{ range $related }}
-        <a href="{{ .Permalink }}" class="post-list-item">
-            <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
-            <div class="post-list-title">{{ .Title }}</div>
-            {{ with .Params.excerpt }}
-            <div class="post-list-excerpt">{{ . }}</div>
-            {{ end }}
+        <a href="{{ .Permalink }}" class="related-item">
+            <span class="related-title">{{ .Title }}</span>
+            <span class="related-date">{{ .Date.Format "jan 2, 2006" }}</span>
         </a>
         {{ end }}
     </div>

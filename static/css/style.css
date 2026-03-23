@@ -980,6 +980,37 @@ footer {
     border-bottom: 1px solid var(--light-gray);
 }
 
+.related-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.related-item:last-child {
+    border-bottom: none;
+}
+
+.related-title {
+    font-size: 13px;
+    color: var(--dark-gray);
+}
+
+.related-item:hover .related-title {
+    color: var(--french-blue);
+}
+
+.related-date {
+    font-family: 'Departure Mono', monospace;
+    font-size: 11px;
+    color: var(--mid-gray);
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
 /* No-thumbnail card placeholder */
 .project-card:not(:has(.project-thumb)) .project-card-body {
     min-height: 120px;
