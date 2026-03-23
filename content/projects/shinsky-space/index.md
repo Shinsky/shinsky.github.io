@@ -6,9 +6,6 @@ status: active
 thumbnail: ""
 hero: ""
 hero_caption: ""
-tags:
-  - tech
-  - meta
 related_tags:
   - meta
   - tech

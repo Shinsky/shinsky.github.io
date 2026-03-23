@@ -14,9 +14,6 @@
             {{ with .Params.description }}
             <p class="project-card-desc">{{ . }}</p>
             {{ end }}
-            {{ with .Params.status }}
-            <span class="project-status project-status-{{ . }}">{{ . }}</span>
-            {{ end }}
         </div>
     </a>
     {{ end }}

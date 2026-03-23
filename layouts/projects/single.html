@@ -16,18 +16,10 @@
         {{ with .Params.description }}
         <p class="project-subtitle">{{ . }}</p>
         {{ end }}
-        {{ with .Params.status }}
-        <span class="project-status project-status-{{ . }}">{{ . }}</span>
-        {{ end }}
     </div>
     <div class="post-body">
         {{ .Content }}
     </div>
-    {{ with .Params.tags }}
-    <div class="post-tags">
-        {{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
-    </div>
-    {{ end }}
 </div>
 
 {{ with .Params.related_tags }}

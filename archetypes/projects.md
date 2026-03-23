@@ -2,11 +2,9 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 date: {{ .Date }}
 description: ""
-status: "active"
 thumbnail: ""
 hero: ""
 hero_caption: ""
-tags: []
 related_tags: []
 draft: true
 ---
