@@ -813,6 +813,104 @@ footer {
     margin-top: 10px;
 }
 
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.project-thumb {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.project-card-body {
+    padding: 16px;
+}
+
+.project-card-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--french-blue);
+    margin-bottom: 6px;
+}
+
+.project-card-desc {
+    font-size: 12px;
+    color: var(--mid-gray);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project-status {
+    font-family: 'Departure Mono', monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.project-status-active {
+    border: 1px solid var(--french-blue);
+    color: var(--french-blue);
+}
+
+.project-status-complete {
+    border: 1px solid var(--mid-gray);
+    color: var(--mid-gray);
+}
+
+.project-status-paused {
+    border: 1px solid var(--mid-gray);
+    color: var(--mid-gray);
+    opacity: 0.7;
+}
+
+.project-subtitle {
+    font-size: 14px;
+    color: var(--mid-gray);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Related thoughts on project pages */
+.related-thoughts {
+    margin-top: 20px;
+}
+
+.related-thoughts h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--french-blue);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+/* No-thumbnail card placeholder */
+.project-card:not(:has(.project-thumb)) .project-card-body {
+    min-height: 120px;
+}
+
 [data-theme="dark"] .main-nav {
     background: linear-gradient(to bottom,
         #3a3a3a 0%,
@@ -856,6 +954,11 @@ footer {
     border-color: #444;
 }
 
+[data-theme="dark"] .project-card {
+    background: var(--white);
+    border-color: #333;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
     .about-layout {
@@ -878,5 +981,9 @@ footer {
         font-size: 13px;
         padding: 12px 25px;
         letter-spacing: 0.5px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }

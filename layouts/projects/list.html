@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="projects-grid">
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $page := . }}
+    <a href="{{ .Permalink }}" class="project-card">
+        {{ with .Params.thumbnail }}
+        {{ $thumb := $page.Resources.GetMatch . }}
+        {{ with $thumb }}
+        <img src="{{ .RelPermalink }}" alt="" class="project-thumb">
+        {{ end }}
+        {{ end }}
+        <div class="project-card-body">
+            <h3 class="project-card-title">{{ .Title }}</h3>
+            {{ with .Params.description }}
+            <p class="project-card-desc">{{ . }}</p>
+            {{ end }}
+            {{ with .Params.status }}
+            <span class="project-status project-status-{{ . }}">{{ . }}</span>
+            {{ end }}
+        </div>
+    </a>
+    {{ end }}
+</div>
+{{ end }}

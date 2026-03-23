@@ -1,0 +1,63 @@
+{{ define "main" }}
+{{ $page := . }}
+<div class="content-box">
+    <a href="/projects/" class="back-to-archive">← all projects</a>
+    {{ with .Params.hero }}
+    {{ $hero := $page.Resources.GetMatch . }}
+    {{ with $hero }}
+    <figure class="hero-figure">
+    {{ partial "responsive-image.html" (dict "img" . "class" "post-hero") }}
+    {{ with $page.Params.hero_caption }}<figcaption class="hero-caption">{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+    {{ end }}
+    <div class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="project-subtitle">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.status }}
+        <span class="project-status project-status-{{ . }}">{{ . }}</span>
+        {{ end }}
+    </div>
+    <div class="post-body">
+        {{ .Content }}
+    </div>
+    {{ with .Params.tags }}
+    <div class="post-tags">
+        {{ range . }}<a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>{{ end }}
+    </div>
+    {{ end }}
+</div>
+
+{{ with .Params.related_tags }}
+{{ $relatedTags := . }}
+{{ $thoughts := where (where site.RegularPages "Section" "thoughts") ".Draft" false }}
+{{ $related := slice }}
+{{ range $thoughts }}
+    {{ $post := . }}
+    {{ range .Params.tags }}
+        {{ if in $relatedTags . }}
+            {{ $related = $related | append $post }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $related = $related | uniq }}
+{{ if gt (len $related) 0 }}
+<div class="content-box related-thoughts">
+    <h2>related thoughts</h2>
+    <div id="post-list">
+        {{ range $related }}
+        <a href="{{ .Permalink }}" class="post-list-item">
+            <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
+            <div class="post-list-title">{{ .Title }}</div>
+            {{ with .Params.excerpt }}
+            <div class="post-list-excerpt">{{ . }}</div>
+            {{ end }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
