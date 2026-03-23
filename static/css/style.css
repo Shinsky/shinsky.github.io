@@ -700,6 +700,10 @@ footer {
     margin: 20px 0;
 }
 
+.post-body figure.post-body-img {
+    margin: 20px 0;
+}
+
 .post-body-img.img-left {
     float: left;
     margin: 4px 20px 10px 0;
@@ -710,6 +714,10 @@ footer {
     float: right;
     margin: 4px 0 10px 20px;
     max-width: 45%;
+}
+
+.post-body-img .hero-caption {
+    margin-top: 6px;
 }
 
 .post-body-img.img-left img,

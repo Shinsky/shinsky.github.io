@@ -1,5 +1,5 @@
 ---
-title: '"Own" What You Love'
+title: "'Own' What You Love"
 slug: own-what-you-love
 date: 2026-03-23
 style: article

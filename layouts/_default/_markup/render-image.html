@@ -1,19 +1,41 @@
 {{- $img := .Page.Resources.GetMatch .Destination -}}
 {{- $align := "" -}}
+{{- $caption := "" -}}
 {{- $class := "post-body-img" -}}
+
 {{- with .Title -}}
-  {{- if eq . "left" -}}
-    {{- $align = "img-left" -}}
-  {{- else if eq . "right" -}}
-    {{- $align = "img-right" -}}
+  {{- if in . "|" -}}
+    {{- $parts := split . "|" -}}
+    {{- $first := trim (index $parts 0) " " -}}
+    {{- $rest := trim (index $parts 1) " " -}}
+    {{- if eq $first "left" -}}
+      {{- $align = "img-left" -}}
+    {{- else if eq $first "right" -}}
+      {{- $align = "img-right" -}}
+    {{- else -}}
+      {{- $caption = . -}}
+    {{- end -}}
+    {{- if or (eq $first "left") (eq $first "right") -}}
+      {{- $caption = $rest -}}
+    {{- end -}}
+  {{- else -}}
+    {{- if eq . "left" -}}
+      {{- $align = "img-left" -}}
+    {{- else if eq . "right" -}}
+      {{- $align = "img-right" -}}
+    {{- else -}}
+      {{- $caption = . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
+
+<figure class="{{ $class }} {{ $align }}">
 {{- if $img -}}
-  <div class="{{ $class }} {{ $align }}">
   {{- partial "responsive-image.html" (dict "img" $img "class" "post-inline-img" "alt" .Text) -}}
-  </div>
 {{- else -}}
-  <div class="{{ $class }} {{ $align }}">
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" class="post-inline-img">
-  </div>
 {{- end -}}
+{{- with $caption }}
+  <figcaption class="hero-caption">{{ . }}</figcaption>
+{{- end }}
+</figure>
