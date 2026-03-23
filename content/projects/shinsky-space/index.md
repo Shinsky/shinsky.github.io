@@ -11,11 +11,6 @@ related_tags:
 draft: false
 ---
 This is the site you're looking at right now. A personal website built from scratch with Hugo, featuring a brushed metal aesthetic inspired by early 2000s Apple and Sony design.
+## **Stack**
 
-**Goals**
-
-A place to write, share projects, and exist on the internet without algorithms or engagement metrics. Just a quiet corner.
-
-**Stack**
-
-Built with Hugo, styled with custom CSS, deployed on Cloudflare Pages. No JavaScript frameworks, no build tools beyond Hugo itself. Fonts are Departure Mono and IBM Plex Sans.
+Built with Hugo, styled with custom CSS, deployed on GitHub Pages. No JavaScript frameworks, no build tools beyond Hugo itself. Fonts are Departure Mono and IBM Plex Sans.
