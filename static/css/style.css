@@ -987,6 +987,8 @@ footer {
 
 .related-item {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
     padding: 12px 0;
