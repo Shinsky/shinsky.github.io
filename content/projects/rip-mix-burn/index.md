@@ -9,5 +9,8 @@ hero: a blu ray drive but close.jpeg
 hero_caption: "Photo: Andrew Lashinsky"
 related_tags:
   - rip-mix-burn
-draft: true
+draft: false
 ---
+# Introduction
+Ripping your own media isn't hard. I've been doing it since I was a kid! The most difficult thing is figuring out where to store the mountains of data you're creating.
+# The Process
