@@ -24,7 +24,7 @@
 
 {{ with .Params.related_tags }}
 {{ $relatedTags := . }}
-{{ $thoughts := where (where site.RegularPages "Section" "thoughts") ".Draft" false }}
+{{ $thoughts := where (where site.RegularPages "Section" "thoughts") "Draft" false }}
 {{ $related := slice }}
 {{ range $thoughts }}
     {{ $post := . }}

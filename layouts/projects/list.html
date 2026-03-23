@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="projects-grid">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range .Pages }}
     {{ $page := . }}
     <a href="{{ .Permalink }}" class="project-card">
         {{ with .Params.thumbnail }}
