@@ -1,14 +1,18 @@
 ---
-title: "shinsky.space"
+title: shinsky.space
 date: 2026-02-20
-description: "My personal corner of the internet. Built with Hugo."
-status: "active"
+description: My personal corner of the internet. Built with Hugo.
+status: active
 thumbnail: ""
 hero: ""
 hero_caption: ""
-tags: ["tech", "meta"]
-related_tags: ["meta", "tech"]
-draft: true
+tags:
+  - tech
+  - meta
+related_tags:
+  - meta
+  - tech
+draft: false
 ---
 This is the site you're looking at right now. A personal website built from scratch with Hugo, featuring a brushed metal aesthetic inspired by early 2000s Apple and Sony design.
 
