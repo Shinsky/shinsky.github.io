@@ -939,6 +939,7 @@ footer {
 [data-theme="dark"] .content-box {
     background: var(--white);
     border-color: #333;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 [data-theme="dark"] .about-photo img {
@@ -957,6 +958,7 @@ footer {
 [data-theme="dark"] .project-card {
     background: var(--white);
     border-color: #333;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Responsive */

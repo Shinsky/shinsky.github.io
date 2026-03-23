@@ -3,9 +3,9 @@ title: shinsky.space
 date: 2026-02-20
 description: My personal corner of the internet. Built with Hugo.
 status: active
-thumbnail: ""
-hero: ""
-hero_caption: ""
+thumbnail: shinskys space on imac.jpeg
+hero: shinskys space on imac.jpeg
+hero_caption: "Photo: Andrew Lashinsky"
 related_tags:
   - meta
   - tech
