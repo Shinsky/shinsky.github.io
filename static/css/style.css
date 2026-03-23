@@ -687,6 +687,25 @@ footer {
     margin-bottom: 0;
 }
 
+.post-body img,
+.post-body picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--light-gray);
+    display: block;
+    margin: 20px 0;
+}
+
+.post-body picture {
+    display: block;
+    margin: 20px 0;
+}
+
+.post-body picture img {
+    margin: 0;
+}
+
 /* Note-style posts */
 .note-item {
     padding: 18px 0 18px 16px;
@@ -735,6 +754,25 @@ footer {
 
 .note-body a:hover {
     color: var(--french-blue-light);
+}
+
+.note-body img,
+.note-body picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--light-gray);
+    display: block;
+    margin: 12px 0;
+}
+
+.note-body picture {
+    display: block;
+    margin: 12px 0;
+}
+
+.note-body picture img {
+    margin: 0;
 }
 
 .note-permalink {

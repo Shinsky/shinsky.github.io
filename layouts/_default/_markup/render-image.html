@@ -1,0 +1,6 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if $img -}}
+  {{- partial "responsive-image.html" (dict "img" $img "class" "post-body-img" "alt" .Text) -}}
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" class="post-body-img">
+{{- end -}}
