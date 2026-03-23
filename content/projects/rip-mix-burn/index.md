@@ -11,5 +11,10 @@ related_tags:
   - rip-mix-burn
 draft: false
 ---
-Ripping your own media isn't hard. I've been doing it since I was a kid! The most difficult thing is figuring out where to store the mountains of data you're creating.
-## The Process
+Ripping your owned media isn't hard. I've been doing it since I was a kid! Once you get the process down, the most difficult thing is figuring out where to store the mountains of data you're creating. So here's a breakdown of the software and hardware tools I use.
+## DVDs & Blu-rays
+test
+## CDs
+test
+## Organization/Tagging/Conversion
+test
