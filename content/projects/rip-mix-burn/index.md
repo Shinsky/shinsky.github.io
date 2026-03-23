@@ -19,6 +19,7 @@ I use MakeMKV to rip movies and shows off of their respective discs. It works on
 ***Disc Drives:***
 - Verbatim 71094 External All-in-One Optical Writer (DVD/Blu-ray)
 - LG BP50NB40 Slim External Drive (DVD/Blu-ray/UHD Blu-ray)
+
 ***Software:***
 - MakeMKV (ripping discs)
 - MKVToolNix (creating, altering, and inspecting MKVs)
