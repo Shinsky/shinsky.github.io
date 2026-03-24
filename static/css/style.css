@@ -687,6 +687,88 @@ footer {
     margin-bottom: 0;
 }
 
+.post-body h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--french-blue);
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.post-body h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--french-blue);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.post-body h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--french-blue);
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.post-body ul,
+.post-body ol {
+    margin: 12px 0 16px 20px;
+}
+
+.post-body li {
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+
+.post-body li:last-child {
+    margin-bottom: 0;
+}
+
+.post-body blockquote {
+    border-left: 3px solid var(--french-blue);
+    padding: 8px 16px;
+    margin: 16px 0;
+    color: var(--mid-gray);
+    font-style: italic;
+}
+
+.post-body hr {
+    border: none;
+    border-top: 1px solid var(--light-gray);
+    margin: 24px 0;
+}
+
+.post-body code {
+    font-family: 'Departure Mono', monospace;
+    font-size: 12px;
+    background: var(--light-gray);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.post-body pre {
+    background: var(--light-gray);
+    padding: 16px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 16px 0;
+}
+
+.post-body pre code {
+    background: none;
+    padding: 0;
+}
+
+.post-body a {
+    color: var(--french-blue);
+    text-decoration: underline;
+}
+
+.post-body a:hover {
+    color: var(--french-blue-light);
+}
+
 .post-body img,
 .post-body picture img {
     max-width: 100%;
