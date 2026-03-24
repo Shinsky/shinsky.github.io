@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{ $page := . }}
+<div class="content-box">
+    <a href="/projects/" class="back-to-archive">← all projects</a>
+    {{ with .Params.hero }}
+    {{ $hero := $page.Resources.GetMatch . }}
+    {{ with $hero }}
+    <figure class="hero-figure">
+    {{ partial "responsive-image.html" (dict "img" . "class" "post-hero") }}
+    {{ with $page.Params.hero_caption }}<figcaption class="hero-caption">{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+    {{ end }}
+    <div class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+        <p class="project-subtitle">{{ . }}</p>
+        {{ end }}
+    </div>
+    <div class="post-body">
+        {{ .Content }}
+    </div>
+</div>
+
+{{ with .Params.related_tags }}
+{{ $relatedTags := . }}
+{{ $thoughts := where (where site.RegularPages "Section" "thoughts") "Draft" false }}
+{{ $related := slice }}
+{{ range $thoughts }}
+    {{ $post := . }}
+    {{ range .Params.tags }}
+        {{ if in $relatedTags . }}
+            {{ $related = $related | append $post }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $related = $related | uniq }}
+{{ if gt (len $related) 0 }}
+<div class="content-box related-thoughts">
+    <h2>related thoughts</h2>
+    <div class="related-list">
+        {{ range $related }}
+        <a href="{{ .Permalink }}" class="related-item">
+            <div class="related-title">{{ .Title }}</div>
+            <div class="related-date">{{ .Date.Format "Jan 2, 2006" | lower }}</div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
