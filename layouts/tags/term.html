@@ -5,7 +5,7 @@
     <div id="post-list">
         {{ range (where .Pages.ByDate.Reverse "Section" "thoughts") }}
         <a href="{{ .Permalink }}" class="post-list-item{{ if eq (.Params.style | default "article") "note" }} post-type-note{{ end }}">
-            <div class="post-list-date">{{ .Date.Format "jan 2, 2006" }}</div>
+            <div class="post-list-date">{{ .Date.Format "Jan 2, 2006" | lower }}</div>
             <div class="post-list-title">{{ .Title }}</div>
             {{ with .Params.excerpt }}
             <div class="post-list-excerpt">{{ . }}</div>

@@ -42,7 +42,7 @@
         {{ range $related }}
         <a href="{{ .Permalink }}" class="related-item">
             <div class="related-title">{{ .Title }}</div>
-            <div class="related-date">{{ .Date.Format "jan 2, 2006" }}</div>
+            <div class="related-date">{{ .Date.Format "Jan 2, 2006" | lower }}</div>
         </a>
         {{ end }}
     </div>
