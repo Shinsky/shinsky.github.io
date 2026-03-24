@@ -788,13 +788,13 @@ footer {
 
 .post-body-img.img-left {
     float: left;
-    margin: 4px 20px 10px 0;
+    margin: 4px 30px 15px 0;
     max-width: 45%;
 }
 
 .post-body-img.img-right {
     float: right;
-    margin: 4px 0 10px 20px;
+    margin: 4px 0 15px 30px;
     max-width: 45%;
 }
 
