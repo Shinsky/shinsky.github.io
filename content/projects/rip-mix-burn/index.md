@@ -35,7 +35,7 @@ I love free and open source stuff, but I'm not against paying for a decent produ
 
 I also have used the free app XLD on macOS to accomplish much of the same from time to time.
 
-As for format: I rip tracks inALAC for its iPod/iPhone compatibility.
+As for format: I rip tracks in ALAC for its iPod/iPhone compatibility.
 
 #### Software: 
 - dBpoweramp (paid)
