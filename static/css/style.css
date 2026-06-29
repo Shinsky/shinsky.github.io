@@ -677,6 +677,8 @@ footer {
 .post-body {
     line-height: 1.8;
     color: var(--dark-gray);
+    text-align: justify;
+    hyphens: auto;
 }
 
 .post-body p {
@@ -693,6 +695,7 @@ footer {
     color: var(--french-blue);
     margin-top: 30px;
     margin-bottom: 12px;
+    text-align: left;
 }
 
 .post-body h3 {
@@ -701,6 +704,7 @@ footer {
     color: var(--french-blue);
     margin-top: 25px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .post-body h4 {
@@ -709,6 +713,7 @@ footer {
     color: var(--french-blue);
     margin-top: 20px;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .post-body ul,
@@ -788,13 +793,13 @@ footer {
 
 .post-body-img.img-left {
     float: left;
-    margin: 4px 30px 15px 0;
+    margin: 4px 40px 18px 0;
     max-width: 45%;
 }
 
 .post-body-img.img-right {
     float: right;
-    margin: 4px 0 15px 30px;
+    margin: 4px 0 18px 40px;
     max-width: 45%;
 }
 
